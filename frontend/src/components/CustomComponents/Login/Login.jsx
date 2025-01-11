@@ -30,17 +30,18 @@ const Login = () => {
             type="text"
             placeholder="Enter Email"
             value={email}
+            required
             onChange={(e) => setEmail(e.target.value)}
-          />
+         />
         </div>
         <div>
           <label>Password</label>
           <input
             type="password"
             placeholder="Enter Password"
-            value={password}
+            value={password} required
             onChange={(e) => setPassword(e.target.value)}
-          />
+         />
         </div>
         <button type="button" className="loginButton" onClick={login}>
           Login
@@ -50,7 +51,7 @@ const Login = () => {
           className="loginButton"
           onClick={() => navigate("/sign")}
         >
-          No Account
+          Signup
         </button>
       </form>
     </div>
